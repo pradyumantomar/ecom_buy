@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "673179245974",
+    "project_id": "ecombuy",
+    "storage_bucket": "ecombuy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673179245974:android:2f78f1d6f2e1e23acf51b7",
+        "android_client_info": {
+          "package_name": "com.example.ecombuy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-rG0gkn2f2BTWfZpLoRsV-q0668CzFjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
