@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   db_client:
     path: packages/db_client
+  payment_client:
+    path: packages/payment_client
 
   cupertino_icons: ^1.0.2
   equatable: ^2.0.5

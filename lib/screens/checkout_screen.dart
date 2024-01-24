@@ -102,5 +102,13 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         paymentMethodData: PaymentMethodData(),
       ),
     );
+
+    final response = await paymentClient.processPayment(
+        paymentMethodId: paymentMethod.id,
+        items: cart.cartItems.map((cartItem) => cartItem.toJson()).toList());
+
+    print(response);
+    if (response['requireAction'] == true &&
+        response['clientSecret'] != null) {}
   }
 }

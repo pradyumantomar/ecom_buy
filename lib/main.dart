@@ -10,8 +10,10 @@ import 'package:ecombuy/screens/category_screen.dart';
 import 'package:ecombuy/screens/checkout_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:payment_client/payment_client.dart';
 
 final dbClient = DbClient();
+final paymentClient = PaymentClient();
 final categoryRepository = CategoryRepository(dbClient: dbClient);
 final productRepository = ProductRepository(dbClient: dbClient);
 final cartRepository = CartRepository();

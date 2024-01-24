@@ -13,8 +13,7 @@ class CategoryRepository {
       final categoriesData = await dbClient.fetchAllFromBundle(
         collection: 'categories',
         // TODO: Add your bundle URL here
-        bundleUrl:
-            'https://us-central1-atomsbox-ecomm-27d08.cloudfunctions.net/ext-firestore-bundle-builder-serve',
+        bundleUrl: 'https://gogole.com',
       );
       return categoriesData
           .map<Category>((categoryData) =>
