@@ -1,4 +1,4 @@
-import 'package:ecombuy/models/cart.dart';
+import 'package:ecombuy/main.dart';
 import 'package:uuid/uuid.dart';
 
 import '../models/cart_item.dart';
@@ -13,29 +13,32 @@ class CartRepository {
         .firstOrNull;
 
     if (existingCartItem != null) {
-      // Modify the quantity
+      //modify the quantity
       final initialQuantity = existingCartItem.quantity;
 
       cart = cart.copyWith(
-        cartItems: List.from(cart.cartItems)
-          ..remove(existingCartItem)
-          ..add(
-            existingCartItem.copyWith(quantity: initialQuantity + quantity),
-          ),
-      );
+          cartItems: List.from(cart.cartItems)
+            ..remove(existingCartItem)
+            ..add(existingCartItem.copyWith(
+                quantity: initialQuantity + quantity)));
     } else {
-      // Add the product to cart
+      //add the product to cart
       cart = cart.copyWith(
-        cartItems: List.from(cart.cartItems)
-          ..add(
-            CartItem(
-                id: const Uuid().v4(), product: product, quantity: quantity),
-          ),
-      );
+          cartItems: List.from(cart.cartItems)
+            ..add(CartItem(
+                id: const Uuid().v4(), product: product, quantity: quantity)));
     }
   }
 
-  removeProductFromCart() {}
+  removeProductFromCart(Product product, int quantity) {
+    var existingCartItem = cart.cartItems
+        .where((item) => item.product.id == product.id)
+        .firstOrNull;
 
-  clearCart() {}
+    // if(existing)
+  }
+
+  clearCart() {
+    cart.cartItems.clear();
+  }
 }

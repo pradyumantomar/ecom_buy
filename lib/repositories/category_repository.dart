@@ -27,7 +27,7 @@ class CategoryRepository {
 
   Future<void> createCategories() async {
     try {
-      for (var category in categories) {
+      for (var category in categoriesTest) {
         await dbClient.add(collection: 'categories', data: category);
       }
     } catch (err) {
@@ -36,7 +36,7 @@ class CategoryRepository {
   }
 }
 
-const categories = [
+const categoriesTest = [
   {
     "name": "Sportswear",
     "description": "This is the sportswear category.",

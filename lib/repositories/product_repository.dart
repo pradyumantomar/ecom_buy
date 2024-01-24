@@ -21,7 +21,9 @@ class ProductRepository {
       for (var product in products) {
         await dbClient.add(collection: 'products', data: product);
       }
-    } catch (err) {}
+    } catch (err) {
+      throw Exception('Error in Creating Product');
+    }
   }
 }
 
